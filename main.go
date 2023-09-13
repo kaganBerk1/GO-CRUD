@@ -24,5 +24,5 @@ func main(){
 }
 
 func basicHandler(w http.ResponseWriter, r *http.Request){
-		w.Write([]byte("Hellow World From Server"))
+		w.Write([]byte("Hellow World From Server!"))
 }
