@@ -1,4 +1,4 @@
-module github.com/dreamsofcode-io/orders-api
+module github.com/kaganBerk1/GO-CRUD
 
 go 1.21.1
 

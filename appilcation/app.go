@@ -20,6 +20,7 @@ func (a *App) start(ctx context.Context) error {
 		Addr: ":3000",
 		Handler: a.router,
 	}
+	
 	err:= server.ListenAndServe()
 	if err != nil{
 		return fmt.Errorf("fail to listen the server SADGE: %w", err)
