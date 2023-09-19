@@ -1,14 +1,15 @@
 package main
-import (
-	"fmt"
-	"context"
-	"github.com/kaganBerk1/GO-CRUD/application"
-	)
 
-func main(){
-	app:= application.New()
-	err:= app.Start(context.TODO())
-	if err != nil{
-		return fmt.Println("fail to listen the server SADGE: ")
+import (
+	app "GO-CRUD/GO-CRUD/appilcation"
+	"context"
+	"fmt"
+)
+
+func main() {
+	app := app.New()
+	err := app.Start(context.TODO())
+	if err != nil {
+		fmt.Println("fail to listen the server SADGE: ")
 	}
 }

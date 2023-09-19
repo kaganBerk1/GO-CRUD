@@ -1,29 +1,30 @@
-package application
+package app
 
 import (
-	"net/http"
-	"fmt"
 	"context"
+	"fmt"
+	"net/http"
 )
-type App struct{
+
+type App struct {
 	router http.Handler
 }
 
-func New() *App{
-	app:=&App{
-		router:loadRoutes(),
+func New() *App {
+	app := &App{
+		router: loadRoutes(),
 	}
 	return app
 }
 
-func (a *App) start(ctx context.Context) error {
-	server:=&http.Server{
-		Addr: ":3000",
+func (a *App) Start(ctx context.Context) error {
+	server := &http.Server{
+		Addr:    ":3000",
 		Handler: a.router,
 	}
 
-	err:= server.ListenAndServe()
-	if err != nil{
+	err := server.ListenAndServe()
+	if err != nil {
 		return fmt.Errorf("fail to listen the server SADGE: %w", err)
 	}
 	return nil
