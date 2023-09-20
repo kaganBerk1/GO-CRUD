@@ -6,6 +6,7 @@ import (
 )
 
 type Order struct {
+	name string
 }
 
 func (o *Order) Create(w http.ResponseWriter, r *http.Request) {
