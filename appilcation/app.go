@@ -22,6 +22,7 @@ func (a *App) Start(ctx context.Context) error {
 		Addr:    ":3000",
 		Handler: a.router,
 	}
+	fmt.Println("3000 listening...")
 
 	err := server.ListenAndServe()
 	if err != nil {
